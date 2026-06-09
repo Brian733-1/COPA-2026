@@ -673,7 +673,7 @@ async function carregarVisitante(aid){
       <div class="ct"><div class="ct-titulo">Contrato Oficial de Aposta Esportiva</div><div class="ct-flags">${a1.f} ⚽ ${a2.f}</div><div class="ct-id">Ref: ${a.id} · Copa do Mundo 2026</div></div>
       <p>Pelo presente instrumento, as partes firmam este Contrato de Aposta Esportiva, no pleno gozo de suas faculdades mentais <em>(juridicamente questionável durante a Copa)</em>.</p>
       <div class="cc"><strong>§1:</strong> ${a.tipo==='1v1'?'Duelo direto':'Bolão em grupo'} — <strong>${a1.n} x ${a2.n}</strong>${a.fase?', '+a.fase:''}${a.data_jogo?', em '+fmtDt(a.data_jogo):''}.</div>
-      ${a.val_aposta?`<div class="cc"><strong>§2:</strong> Valor: <strong>${a.val_aposta}</strong>.${a.val_premio?' Prêmio: <strong>'+a.val_premio+'</strong>.':''} Pagamento em 48h.</div>`:''}
+      ${a.val_aposta?`<div class="cc"><strong>§2:</strong> Valor: <strong>${a.val_aposta}</strong>.${a.val_premio?' Prêmio: <strong>'+a.val_premio+'</strong>.':''} Pagamento em 24h.</div>`:''}
       ${a.mico?`<div class="cc"><strong>Mico:</strong> ${a.mico}</div>`:''}
       <p style="font-size:12px;color:#999;font-family:sans-serif;margin-top:10px"><em>Os signatários reconhecem que chorar não cancela a dívida.</em></p>
       <div class="assi">
@@ -685,7 +685,7 @@ async function carregarVisitante(aid){
         }).join('')}
       </div>
     </div>
-    ${completo?`<div class="pdf-ready"><h3>🎉 Todos assinaram!</h3><button class="btn btn-verde btn-block" style="margin-top:10px" onclick="pdfAposta('${aid}')">📄 Baixar PDF</button></div>`:''}
+    ${completo?`<div class="pdf-ready"><h3>🎉 Você assinou!</h3><button class="btn btn-verde btn-block" style="margin-top:10px" onclick="pdfAposta('${aid}')">📄 Baixar PDF</button></div>`:''}
     <div class="card" id="fv-${aid}">
       <div class="card-title">✍️ Assinar e deixar palpite</div>
       <label>Seu nome</label>
